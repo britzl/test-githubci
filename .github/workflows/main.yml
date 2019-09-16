@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  push:
+    - master
+
+jobs:
+  setup-windows:
+    runs-on: windows-2016
+    steps: [
+      { name: 'Checkout', uses: actions/checkout@v1, with: { fetch-depth: 1 } },
+      { name: 'Install Python', uses: actions/setup-python@v1, with: { python-version: 2.x, architecture: x64 } },
+      { name: 'Install dependencies', run: 'python ci/ci.py install' },
