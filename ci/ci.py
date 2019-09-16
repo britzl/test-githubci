@@ -30,7 +30,7 @@ def mingwget(package):
 
 def install():
     system = platform.system()
-    print("Installing dependencies for system '%s' " % (system))
+    print("Installing depen dencies for system '%s' " % (system))
     if system == "Linux":
         call("sudo apt-get update")
         call("sudo apt-get install -y software-properties-common")
