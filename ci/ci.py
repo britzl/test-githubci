@@ -30,7 +30,7 @@ def mingwget(package):
 
 def install():
     system = platform.system()
-    print("Installing depen dencies for system '%s' " % (system))
+    print("Installing dependencies for system '%s' " % (system))
     if system == "Linux":
         call("sudo apt-get update")
         call("sudo apt-get install -y software-properties-common")
@@ -68,7 +68,7 @@ def install():
         aptget("silversearcher-ag")
         aptget("valgrind")
     elif system == "Windows":
-        choco("visualstudio2017-workload-vctools")
+        # choco("visualstudio2017-workload-vctools")
         choco("mingw")
         choco("mingw-get")
         mingwget("msys-wget-bin")
